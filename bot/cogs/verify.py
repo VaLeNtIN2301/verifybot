@@ -17,7 +17,7 @@ class Verify(commands.Cog):
 
 
     @commands.command()
-    @commands.has_role("verify+")
+    @commands.has_role("Verificat(+)")
     async def verify(self, ctx, member: discord.Member=False):
         if member == False:
             help = "verify"
@@ -25,8 +25,8 @@ class Verify(commands.Cog):
             await ctx.send(embed=emb)
         else:
 
-            await member.add_roles(discord.utils.get(member.guild.roles, name="verify"))
-            await ctx.send("Ok")
+            await member.add_roles(discord.utils.get(member.guild.roles, name="Verificat"))
+            await ctx.reply(f'Ai verificat pe {member.mention}', mention_author=True)
 
 
     @commands.command()

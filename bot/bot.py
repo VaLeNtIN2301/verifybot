@@ -30,7 +30,7 @@ def attach_cogs(bot):
 
 
 bot = commands.Bot(command_prefix=get_prefix, case_insensitive=True, intents = discord.Intents.all())
-bot.prefix = "valy"
+bot.prefix = "pls"
 bot.remove_command('help')
 attach_cogs(bot)
 
@@ -42,7 +42,7 @@ attach_cogs(bot)
 @bot.event
 async def on_ready():
     print("Sunt Online")
-    game = discord.Game(" valy help")
+    game = discord.Game(" pls help")
     await bot.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -75,7 +75,7 @@ async def on_command_error(ctx, error):
 
 
 async def start():
-    await bot.start("token", bot=True, reconnect=True)
+    await bot.start("token here", bot=True, reconnect=True)
 
 
 if __name__ == "__main__":
